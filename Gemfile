@@ -19,6 +19,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
   gem 'spring'
+  gem 'chusaku', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

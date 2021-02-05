@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authenticate_user, only: [:me]
 
+  # @route GET /api/v1/users/me (me_api_v1_users)
   def me
     return json_response(current_user) if current_user.present?
 
