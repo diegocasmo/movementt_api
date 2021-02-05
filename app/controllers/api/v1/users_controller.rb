@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authenticate_user, only: [:me]
+  skip_after_action :verify_authorized, only: [:me]
 
   # @route GET /api/v1/users/me (me_api_v1_users)
   def me

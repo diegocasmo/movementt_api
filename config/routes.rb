@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         end
       end
 
+      resources :exercises, only: [:index, :create, :update, :destroy]
     end
   end
 end

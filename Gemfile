@@ -8,7 +8,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'firebase-auth-rails', '~> 0.1.2'
 gem 'active_model_serializers', '~> 0.10.12'
-
+gem 'pundit', '~> 2.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do

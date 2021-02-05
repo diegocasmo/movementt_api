@@ -126,6 +126,8 @@ GEM
     pg (1.2.3)
     puma (5.2.0)
       nio4r (~> 2.0)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -192,6 +194,7 @@ DEPENDENCIES
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
+  pundit (~> 2.1)
   rails (~> 6.1.1)
   spring
   tzinfo-data
