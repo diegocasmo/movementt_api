@@ -15,4 +15,4 @@ test: &test
   password: <%= ENV['DB_TEST_PASSWORD'] %>
 
 production:
-  url: <%= ENV['DB_PROD_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
