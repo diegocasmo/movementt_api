@@ -16,6 +16,16 @@ class Api::V1::UsersController < ApplicationController
     json_response(user)
   end
 
+  # @route PATCH /api/v1/users/:id (api_v1_user)
+  # @route PUT /api/v1/users/:id (api_v1_user)
+  def update
+    authorize(current_user)
+
+    current_user.update!(permitted_attributes(current_user))
+
+    json_response(current_user)
+  end
+
   private
 
   def token
