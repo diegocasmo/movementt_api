@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_160319) do
+ActiveRecord::Schema.define(version: 2021_03_24_143453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,30 @@ ActiveRecord::Schema.define(version: 2021_02_05_160319) do
     t.index ["user_id"], name: "index_exercises_on_user_id"
   end
 
+  create_table "routine_exercises", force: :cascade do |t|
+    t.bigint "routine_id", null: false
+    t.string "name", limit: 255, default: "", null: false
+    t.integer "category_type", limit: 2, default: 0, null: false
+    t.integer "movement_type", limit: 2, default: 0, null: false
+    t.integer "weight_unit_type", limit: 2, default: 0, null: false
+    t.integer "quantity", default: 1, null: false
+    t.float "weight", default: 0.0, null: false
+    t.integer "rest_seconds", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["routine_id"], name: "index_routine_exercises_on_routine_id"
+  end
+
+  create_table "routines", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name", limit: 255, default: "", null: false
+    t.integer "rounds", default: 1, null: false
+    t.integer "rest_seconds", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_routines_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "uid", limit: 255, default: "", null: false
     t.string "email", limit: 255, default: "", null: false
@@ -35,4 +59,6 @@ ActiveRecord::Schema.define(version: 2021_02_05_160319) do
   end
 
   add_foreign_key "exercises", "users", on_update: :restrict, on_delete: :cascade
+  add_foreign_key "routine_exercises", "routines", on_update: :restrict, on_delete: :cascade
+  add_foreign_key "routines", "users", on_update: :restrict, on_delete: :cascade
 end

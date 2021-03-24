@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   # Associations
+  has_many :routines, inverse_of: :user, dependent: :destroy
   has_many :exercises, inverse_of: :user, dependent: :destroy
 
   # Validations
