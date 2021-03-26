@@ -1,5 +1,7 @@
 class Exercise < ApplicationRecord
   include MovementType
+  include Sanitize
+  strip_attributes :name
 
   # Associations
   belongs_to :user, inverse_of: :exercises

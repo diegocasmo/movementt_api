@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  include Sanitize
+  strip_attributes :email, :uid
+
   # Associations
   has_many :routines, inverse_of: :user, dependent: :destroy
   has_many :exercises, inverse_of: :user, dependent: :destroy

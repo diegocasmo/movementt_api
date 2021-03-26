@@ -1,4 +1,7 @@
 class Routine < ApplicationRecord
+  include Sanitize
+  strip_attributes :name
+
   # Associations
   belongs_to :user, inverse_of: :routines
   has_many :exercises, inverse_of: :routine, dependent: :destroy, class_name: 'RoutineExercise'

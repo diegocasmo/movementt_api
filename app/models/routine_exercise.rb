@@ -1,5 +1,7 @@
 class RoutineExercise < ApplicationRecord
   include MovementType
+  include Sanitize
+  strip_attributes :name
 
   # Associations
   belongs_to :routine, inverse_of: :exercises
