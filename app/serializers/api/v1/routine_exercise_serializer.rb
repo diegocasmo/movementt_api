@@ -8,6 +8,7 @@ class Api::V1::RoutineExerciseSerializer < ActiveModel::Serializer
     :quantity,
     :weight,
     :rest_seconds,
+    :position,
     :created_at,
     :updated_at
   ]

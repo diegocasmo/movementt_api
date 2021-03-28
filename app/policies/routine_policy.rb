@@ -29,7 +29,8 @@ class RoutinePolicy < ApplicationPolicy
         :weight_unit_type,
         :quantity,
         :weight,
-        :rest_seconds
+        :rest_seconds,
+        :position
       ]
     ]
   end
@@ -47,7 +48,8 @@ class RoutinePolicy < ApplicationPolicy
         :weight_unit_type,
         :quantity,
         :weight,
-        :rest_seconds
+        :rest_seconds,
+        :position
       ]
     ]
   end
