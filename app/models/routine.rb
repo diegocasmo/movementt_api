@@ -5,7 +5,7 @@ class Routine < ApplicationRecord
   # Associations
   belongs_to :user, inverse_of: :routines
   has_many :exercises, inverse_of: :routine, dependent: :destroy, class_name: 'RoutineExercise'
-  accepts_nested_attributes_for :exercises
+  accepts_nested_attributes_for :exercises, allow_destroy: true
 
   # Validations
   validates :user, presence: true
