@@ -49,7 +49,8 @@ class RoutinePolicy < ApplicationPolicy
         :quantity,
         :weight,
         :rest_seconds,
-        :position
+        :position,
+        :_destroy
       ]
     ]
   end
