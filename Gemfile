@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
-gem 'rails', '~> 6.1.1'
+gem 'rails', '~> 6.1.3'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'firebase-auth-rails', '~> 0.1.2'
