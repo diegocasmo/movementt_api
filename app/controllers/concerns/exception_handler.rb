@@ -10,7 +10,7 @@ module ExceptionHandler
     private
 
     def unauthorized
-      head(:unauthorized)
+      json_response(nil, :unauthorized)
     end
 
     def record_not_found e
