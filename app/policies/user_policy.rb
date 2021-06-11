@@ -1,6 +1,7 @@
 class UserPolicy < ApplicationPolicy
   def update?
-    record == user
+    record == user &&
+      user.verified.present?
   end
 
   def verify?
