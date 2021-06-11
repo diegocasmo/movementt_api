@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:update] do
         collection do
           get :me
+          put :verify
         end
       end
 
