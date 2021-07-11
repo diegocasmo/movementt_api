@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx,vim,sublimetext,dotenv,ruby,windows,rails
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,vim,sublimetext,dotenv,ruby,windows,rails
+# Created by https://www.toptal.com/developers/gitignore/api/osx,vim,ruby,redis,rails,dotenv,windows,sublimetext
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,vim,ruby,redis,rails,dotenv,windows,sublimetext
 
 ### dotenv ###
 .env
@@ -60,6 +60,10 @@ config/master.key
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
 
+# dotenv, dotenv-rails
+# TODO Comment out these rules if environment variables can be committed
+.env.*
+
 ## Environment normalization:
 /.bundle
 /vendor/bundle
@@ -97,6 +101,12 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+/public/uploads
+
+### Redis ###
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb
 
 ### Ruby ###
 *.gem
@@ -164,6 +174,7 @@ build-iPhoneSimulator/
 
 # SFTP configuration file
 sftp-config.json
+sftp-config-alt*.json
 
 # Package control specific files
 Package Control.last-run
@@ -228,4 +239,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/osx,vim,sublimetext,dotenv,ruby,windows,rails
+# End of https://www.toptal.com/developers/gitignore/api/osx,vim,ruby,redis,rails,dotenv,windows,sublimetext
