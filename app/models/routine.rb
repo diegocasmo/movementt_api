@@ -9,6 +9,7 @@ class Routine < ApplicationRecord
 
   # Validations
   validates :user, presence: true
+  validates :exercises, presence: true
   validates :name, presence: true, length: { maximum: 255 }
   validates :rounds, presence: true, numericality: {
     only_integer: true,
@@ -18,5 +19,4 @@ class Routine < ApplicationRecord
     only_integer: true,
     greater_than_or_equal_to: 0
   }
-  validates :exercises, presence: true
 end

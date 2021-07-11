@@ -3,6 +3,7 @@ class User < ApplicationRecord
   strip_attributes :email, :uid
 
   # Associations
+  has_many :workouts, inverse_of: :user, dependent: :destroy
   has_many :routines, inverse_of: :user, dependent: :destroy
   has_many :exercises, inverse_of: :user, dependent: :destroy
 
