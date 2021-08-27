@@ -5,18 +5,18 @@ class RoutinePolicy < ApplicationPolicy
 
   def create?
     record.user == user &&
-      user.verified.present?
+      user.verified?
   end
 
   def update?
     record.user == user &&
-      user.verified.present? &&
+      user.verified? &&
       record.exercises.all? { |x| RoutineExercisePolicy.new(user, x).update? }
   end
 
   def destroy?
     record.user == user &&
-      user.verified.present? &&
+      user.verified? &&
       record.exercises.all? { |x| RoutineExercisePolicy.new(user, x).destroy? }
   end
 

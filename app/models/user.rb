@@ -15,4 +15,8 @@ class User < ApplicationRecord
   # Scopes
   scope :verified, -> { where(verified: true)  }
   scope :unverified, -> { where(verified: false)  }
+
+  def verified?
+    verified.present?
+  end
 end

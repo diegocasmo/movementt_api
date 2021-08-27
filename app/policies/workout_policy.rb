@@ -5,7 +5,7 @@ class WorkoutPolicy < ApplicationPolicy
 
   def create?
     record.user == user &&
-      user.verified.present?
+      user.verified?
   end
 
   def permitted_attributes_for_create
