@@ -5,7 +5,7 @@ ruby File.read(File.join(File.dirname(__FILE__), ".ruby-version")).strip
 
 gem 'rails', '~> 6.1.4'
 gem 'pg', '~> 1.2', '>= 1.2.3'
-gem 'puma', '~> 5.4'
+gem 'puma', '~> 5.5'
 gem 'firebase-auth-rails', '~> 0.1.2'
 gem 'active_model_serializers', '~> 0.10.12'
 gem 'pundit', '~> 2.1', '>= 2.1.1'
