@@ -31,6 +31,9 @@ class Workout < ApplicationRecord
   validates :completed_at, presence: true
   validate :completed_at_is_feasible
 
+  # Scopes
+  scope :paginated_history, ->(page = 1) { order(created_at: :desc).page(page) }
+
   private
 
   def completed_at_is_feasible
