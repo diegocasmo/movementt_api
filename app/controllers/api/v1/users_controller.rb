@@ -6,11 +6,6 @@ class Api::V1::UsersController < ApplicationController
   def me
     return json_response(current_user) if current_user.present?
 
-    logger.info("\n\n----------here----------")
-    logger.info(current_user)
-    logger.info(payload)
-    logger.info("----------here----------\n\n")
-
     raise ApplicationController::Unauthorized if payload.blank?
     user = User.find_or_create_by!(
       uid: payload[:user_id],
