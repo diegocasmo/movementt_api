@@ -6,6 +6,6 @@ API for [Movementt](https://github.com/diegocasmo/movementt).
 
 - Copy the `.env.example` file and rename it to the `.env`
   - `cp .env.example .env`
-- Fill-in en `.env` file and, making sure to add the Firebase SDK development configuration
+- Fill-in the `.env` file and add the Firebase SDK development configuration
 - Run `bundle install`
 - Start the server: `bundle exec rails s`
