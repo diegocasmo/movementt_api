@@ -1,24 +1,11 @@
-# README
+# Movementt API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API for [Movementt](https://github.com/diegocasmo/movementt).
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Copy the `.env.example` file and rename it to the `.env`
+  - `cp .env.example .env`
+- Fill-in en `.env` file and, making sure to add the Firebase SDK development configuration
+- Run `bundle install`
+- Start the server: `bundle exec rails s`
