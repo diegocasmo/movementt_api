@@ -17,6 +17,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }, uniqueness: true
   validates :verified, inclusion: { in: [true, false] }
   validates :weight_unit_type, inclusion: { in: system_of_measurements.keys }
+  validates :distance_unit_type, inclusion: { in: system_of_measurements.keys }
 
   # Scopes
   scope :verified, -> { where(verified: true)  }
