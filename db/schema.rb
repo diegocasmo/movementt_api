@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_14_225010) do
+ActiveRecord::Schema.define(version: 2021_12_16_212218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_225010) do
     t.integer "category_type", limit: 2, default: 0, null: false
     t.integer "movement_type", limit: 2, default: 0, null: false
     t.integer "weight_unit_type", limit: 2, default: 0, null: false
-    t.integer "quantity", default: 1, null: false
+    t.float "quantity", default: 1.0, null: false
     t.float "weight", default: 0.0, null: false
     t.integer "rest_seconds", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2021_12_14_225010) do
     t.integer "category_type", limit: 2, default: 0, null: false
     t.integer "movement_type", limit: 2, default: 0, null: false
     t.integer "weight_unit_type", limit: 2, default: 0, null: false
-    t.integer "quantity", default: 1, null: false
+    t.float "quantity", default: 1.0, null: false
     t.float "weight", default: 0.0, null: false
     t.integer "rest_seconds", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false

@@ -21,8 +21,7 @@ module Exercisable
     validates :weight_unit_type, inclusion: { in: weight_unit_types.keys }
     validates :name, presence: true, length: { maximum: 255 }
     validates :quantity, presence: true, numericality: {
-      only_integer: true,
-      greater_than_or_equal_to: 1
+      greater_than: 0
     }
     validates :weight, presence: true, numericality: {
       greater_than_or_equal_to: 0
