@@ -12,13 +12,20 @@ module Exercisable
       time: 1,
       distance: 2
     }
+
     enum weight_unit_type: {
       metric: 0,
       imperial: 1
-    }
+    }, _prefix: :weight_unit_type
+
+    enum distance_unit_type: {
+      metric: 0,
+      imperial: 1
+    }, _prefix: :distance_unit_type
 
     validates :category_type, inclusion: { in: category_types.keys }
     validates :weight_unit_type, inclusion: { in: weight_unit_types.keys }
+    validates :distance_unit_type, inclusion: { in: distance_unit_types.keys }
     validates :name, presence: true, length: { maximum: 255 }
     validates :quantity, presence: true, numericality: {
       greater_than: 0

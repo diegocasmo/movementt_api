@@ -5,6 +5,7 @@ class Api::V1::WorkoutExerciseSerializer < ActiveModel::Serializer
     :category_type,
     :movement_type,
     :weight_unit_type,
+    :distance_unit_type,
     :quantity,
     :weight,
     :rest_seconds,
