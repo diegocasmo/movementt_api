@@ -4,7 +4,9 @@ class User < ApplicationRecord
 
   # Associations
   has_many :workouts, inverse_of: :user, dependent: :destroy
+  has_many :workout_exercises, :through => :workouts, source: :exercises
   has_many :routines, inverse_of: :user, dependent: :destroy
+  has_many :routine_exercises, :through => :routines, source: :exercises
   has_many :exercises, inverse_of: :user, dependent: :destroy
 
   enum weight_unit_type: {

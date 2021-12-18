@@ -7,4 +7,7 @@ class RoutineExercise < ApplicationRecord
 
   # Validations
   validates :routine, presence: true
+
+  # Scopes
+  scope :weighted, -> { where('weight > 0')  }
 end

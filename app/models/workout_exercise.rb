@@ -7,4 +7,7 @@ class WorkoutExercise < ApplicationRecord
 
   # Validations
   validates :workout, presence: true
+
+  # Scopes
+  scope :weighted, -> { where('weight > 0')  }
 end

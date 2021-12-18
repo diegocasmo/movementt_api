@@ -32,7 +32,12 @@ class Api::V1::UsersController < ApplicationController
   def update
     authorize(current_user)
 
-    current_user.update!(permitted_attributes(current_user))
+    attrs = permitted_attributes(current_user)
+    UserService::Update.call(
+      user: current_user,
+      weight_unit_type: attrs[:weight_unit_type],
+      distance_unit_type: attrs[:distance_unit_type],
+    )
 
     json_response(current_user)
   end

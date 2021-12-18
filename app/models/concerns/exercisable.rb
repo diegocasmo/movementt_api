@@ -11,7 +11,7 @@ module Exercisable
       reps: 0,
       time: 1,
       distance: 2
-    }
+    }, _prefix: :category_type
 
     enum weight_unit_type: {
       metric: 0,

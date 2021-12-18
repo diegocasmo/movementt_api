@@ -11,6 +11,7 @@ gem 'active_model_serializers', '~> 0.10.12'
 gem 'pundit', '~> 2.1', '>= 2.1.1'
 gem 'bootsnap', '~> 1.7', '>= 1.7.7', require: false
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'simple_command', '~> 0.0.9'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
