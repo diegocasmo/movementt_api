@@ -65,8 +65,6 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    after_commit_everywhere (0.1.5)
-      activerecord (>= 4.2)
     bootsnap (1.9.3)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -208,7 +206,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.12)
-  after_commit_everywhere (~> 0.1.5)
   bootsnap (~> 1.7, >= 1.7.7)
   byebug
   chusaku (~> 0.5.0)
