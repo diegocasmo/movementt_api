@@ -1,9 +1,9 @@
 class Api::V1::UsersController < ApplicationController
-  skip_before_action :authenticate_user, only: [:me]
-  skip_after_action :verify_authorized, only: [:me]
+  skip_before_action :authenticate_user, only: [:create]
+  skip_after_action :verify_authorized, only: [:create]
 
-  # @route GET /api/v1/users/me (me_api_v1_users)
-  def me
+  # @route POST /api/v1/users (api_v1_users)
+  def create
     return json_response(current_user) if current_user.present?
 
     raise ApplicationController::Unauthorized if payload.blank?
