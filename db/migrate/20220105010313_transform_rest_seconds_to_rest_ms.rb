@@ -12,6 +12,9 @@ class TransformRestSecondsToRestMs < ActiveRecord::Migration[6.1]
         relation.update_all('rest_ms = rest_ms * 1000')
       end
     end
+
+    RoutineExercise.category_type_time.update_all('quantity = quantity * 1000')
+    WorkoutExercise.category_type_time.update_all('quantity = quantity * 1000')
   end
 
   def down
@@ -20,5 +23,8 @@ class TransformRestSecondsToRestMs < ActiveRecord::Migration[6.1]
         relation.update_all('rest_ms = rest_ms / 1000')
       end
     end
+
+    RoutineExercise.category_type_time.update_all('quantity = quantity / 1000')
+    WorkoutExercise.category_type_time.update_all('quantity = quantity / 1000')
   end
 end
