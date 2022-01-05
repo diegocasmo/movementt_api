@@ -3,7 +3,7 @@ class Api::V1::RoutineSerializer < ActiveModel::Serializer
     :id,
     :name,
     :rounds,
-    :rest_seconds,
+    :rest_ms,
     :exercises,
     :created_at,
     :updated_at

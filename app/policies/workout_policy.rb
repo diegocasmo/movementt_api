@@ -12,7 +12,7 @@ class WorkoutPolicy < ApplicationPolicy
     [
       :name,
       :rounds,
-      :rest_seconds,
+      :rest_ms,
       :rounds_completed,
       :elapsed_ms,
       :started_at,
@@ -25,7 +25,7 @@ class WorkoutPolicy < ApplicationPolicy
         :distance_unit_type,
         :quantity,
         :weight,
-        :rest_seconds,
+        :rest_ms,
       ]
     ]
   end

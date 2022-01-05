@@ -8,7 +8,7 @@ class Api::V1::WorkoutExerciseSerializer < ActiveModel::Serializer
     :distance_unit_type,
     :quantity,
     :weight,
-    :rest_seconds,
+    :rest_ms,
     :created_at,
     :updated_at
   ]

@@ -24,7 +24,7 @@ class RoutinePolicy < ApplicationPolicy
     [
       :name,
       :rounds,
-      :rest_seconds,
+      :rest_ms,
       exercises_attributes: [
         :name,
         :category_type,
@@ -33,7 +33,7 @@ class RoutinePolicy < ApplicationPolicy
         :distance_unit_type,
         :quantity,
         :weight,
-        :rest_seconds,
+        :rest_ms,
         :position
       ]
     ]
@@ -43,7 +43,7 @@ class RoutinePolicy < ApplicationPolicy
     [
       :name,
       :rounds,
-      :rest_seconds,
+      :rest_ms,
       exercises_attributes: [
         :id,
         :name,
@@ -53,7 +53,7 @@ class RoutinePolicy < ApplicationPolicy
         :distance_unit_type,
         :quantity,
         :weight,
-        :rest_seconds,
+        :rest_ms,
         :position,
         :_destroy
       ]

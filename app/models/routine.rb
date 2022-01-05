@@ -15,7 +15,7 @@ class Routine < ApplicationRecord
     only_integer: true,
     greater_than_or_equal_to: 1
   }
-  validates :rest_seconds, presence: true, numericality: {
+  validates :rest_ms, presence: true, numericality: {
     only_integer: true,
     greater_than_or_equal_to: 0
   }

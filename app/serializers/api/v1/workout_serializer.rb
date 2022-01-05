@@ -3,7 +3,7 @@ class Api::V1::WorkoutSerializer < ActiveModel::Serializer
     :id,
     :name,
     :rounds,
-    :rest_seconds,
+    :rest_ms,
     :rounds_completed,
     :elapsed_ms,
     :started_at,
