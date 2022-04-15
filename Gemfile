@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby File.read(File.join(File.dirname(__FILE__), ".ruby-version")).strip
 
-gem 'rails', '~> 6.1.4'
+gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.3', '>= 1.3.5'
 gem 'puma', '~> 5.6', '>= 5.6.4'
 gem 'firebase-auth-rails', '~> 0.1.2'
