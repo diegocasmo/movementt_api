@@ -14,4 +14,8 @@ API for [Movementt](https://github.com/diegocasmo/movementt).
   - `cp .env.example .env`
 - Fill-in the `.env` file and add the Firebase SDK development configuration
 - Run `bundle install`
+  - Issues with `pg`?
+    - Run `gem install pg -v '1.3.5' --source 'https://rubygems.org/' -- --with-pg-config=/Users/<your_user>/.asdf/installs/postgres/<pg_version>/bin/pg_config `
+- Create the database: `bundle exec rake db:create`
+- Run migrations: `bundle exec rake db:migrate`
 - Start the server: `bundle exec rails s`
