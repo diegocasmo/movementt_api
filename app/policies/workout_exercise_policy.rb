@@ -1,6 +1,5 @@
 class WorkoutExercisePolicy < ApplicationPolicy
   def create?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 end

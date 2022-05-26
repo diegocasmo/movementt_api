@@ -4,18 +4,15 @@ class ExercisePolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def update?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def destroy?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def permitted_attributes_for_create

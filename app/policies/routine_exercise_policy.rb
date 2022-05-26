@@ -1,16 +1,13 @@
 class RoutineExercisePolicy < ApplicationPolicy
   def create?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def update?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def destroy?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 end

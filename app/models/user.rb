@@ -22,15 +22,6 @@ class User < ApplicationRecord
   # Validations
   validates :uid, presence: true, length: { maximum: 255 }, uniqueness: true
   validates :email, presence: true, length: { maximum: 255 }, uniqueness: true
-  validates :verified, inclusion: { in: [true, false] }
   validates :weight_unit_type, inclusion: { in: weight_unit_types.keys }, allow_nil: true
   validates :distance_unit_type, inclusion: { in: distance_unit_types.keys }, allow_nil: true
-
-  # Scopes
-  scope :verified, -> { where(verified: true)  }
-  scope :unverified, -> { where(verified: false)  }
-
-  def verified?
-    verified.present?
-  end
 end

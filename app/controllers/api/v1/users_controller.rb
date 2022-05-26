@@ -10,21 +10,9 @@ class Api::V1::UsersController < ApplicationController
     user = User.find_or_create_by!(
       uid: payload[:user_id],
       email: payload[:email],
-      verified: payload[:email_verified],
     )
 
     json_response(user)
-  end
-
-  # @route PUT /api/v1/users/verify (verify_api_v1_users)
-  def verify
-    authorize(current_user)
-
-    if payload[:email_verified].present?
-      current_user.update!(verified: true)
-    end
-
-    json_response(current_user)
   end
 
   # @route PATCH /api/v1/users/:id (api_v1_user)

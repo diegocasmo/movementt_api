@@ -4,19 +4,16 @@ class RoutinePolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user &&
-      user.verified?
+    record.user == user
   end
 
   def update?
     record.user == user &&
-      user.verified? &&
       record.exercises.all? { |x| RoutineExercisePolicy.new(user, x).update? }
   end
 
   def destroy?
     record.user == user &&
-      user.verified? &&
       record.exercises.all? { |x| RoutineExercisePolicy.new(user, x).destroy? }
   end
 
