@@ -19,3 +19,4 @@ API for [Movementt](https://github.com/diegocasmo/movementt).
 - Create the database: `bundle exec rake db:create`
 - Run migrations: `bundle exec rake db:migrate`
 - Start the server: `bundle exec rails s`
+
