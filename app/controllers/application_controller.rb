@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
   class Unauthorized < StandardError; end
 
   include Firebase::Auth::Authenticable
-  include Pundit
+  include Pundit::Authorization
   include Response
   include ExceptionHandler
 
