@@ -23,6 +23,7 @@ group :development do
   gem 'spring', '~> 4.0'
   gem 'chusaku', '~> 0.6.1'
   gem 'rails-erd', '~> 1.6', '>= 1.6.1'
+  gem 'overcommit', '~> 0.60.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
