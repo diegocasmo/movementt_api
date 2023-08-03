@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby File.read(File.join(File.dirname(__FILE__), ".ruby-version")).strip
+ruby '3.1.0'
 
 gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.3', '>= 1.3.5'
@@ -12,6 +12,9 @@ gem 'pundit', '~> 2.2'
 gem 'bootsnap', '~> 1.11', '>= 1.11.1', require: false
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'simple_command', '~> 0.1.0'
+gem 'net-smtp', '~> 0.2.1'
+gem 'net-imap', '~> 0.2.1'
+gem 'net-pop', '~> 0.1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -27,3 +30,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
