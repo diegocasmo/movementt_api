@@ -15,6 +15,7 @@ gem 'simple_command', '~> 0.1.0'
 gem 'net-smtp', '~> 0.2.1'
 gem 'net-imap', '~> 0.2.1'
 gem 'net-pop', '~> 0.1.0'
+gem "redis", "~> 4.6"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -27,10 +28,7 @@ group :development do
   gem 'chusaku', '~> 0.6.1'
   gem 'rails-erd', '~> 1.6', '>= 1.6.1'
   gem 'overcommit', '~> 0.60.0'
+  gem "dockerfile-rails", ">= 1.5"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "dockerfile-rails", ">= 1.5", :group => :development
-
-gem "redis", "~> 4.6"
