@@ -5,7 +5,7 @@ ruby '3.1.0'
 
 gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.3', '>= 1.3.5'
-gem 'puma', '~> 5.6', '>= 5.6.4'
+gem 'puma', '~> 5.6'
 gem 'firebase-auth-rails', '~> 0.1.2'
 gem 'active_model_serializers', '~> 0.10.13'
 gem 'pundit', '~> 2.2'
